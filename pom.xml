@@ -27,6 +27,8 @@
     </dependency>
   </dependencies>
 
+  <packaging>jar</packaging>
+
   <build>
     <plugins>
       <plugin>
@@ -54,8 +56,9 @@
         <executions>
           <execution>
             <id>attach-sources</id>
+            <phase>package</phase>
             <goals>
-              <goal>jar-no-fork</goal>
+              <goal>jar</goal>
             </goals>
           </execution>
         </executions>
@@ -67,6 +70,7 @@
         <executions>
           <execution>
             <id>attach-javadocs</id>
+            <phase>package</phase>
             <goals>
               <goal>jar</goal>
             </goals>
