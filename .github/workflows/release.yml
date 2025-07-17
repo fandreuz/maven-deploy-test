@@ -23,8 +23,8 @@ jobs:
           servers: '[{"id": "central", "username": "${{secrets.MAVEN_USER}}", "password": "${{secrets.MAVEN_TOKEN}}"}]'
       - name: Maven publish
         run: |
-          mvn clean verify package
-          mvn gpg:sign
+          mvn clean verify
+          mvn package gpg:sign
           mvn deploy
         env:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
