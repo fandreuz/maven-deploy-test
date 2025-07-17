@@ -6,7 +6,7 @@
 
   <groupId>io.github.fandreuz</groupId>
   <artifactId>maven-deploy-test</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
 
   <name>maven-deploy-test</name>
   <description>A simple maven-deploy-test.</description>
