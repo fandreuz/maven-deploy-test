@@ -18,6 +18,14 @@ jobs:
           server-id: central
           server-username: ${{ secrets.MAVEN_USER }}--- central-publishing-maven-plugin:0.8.0:publish
           server-password: ${{ secrets.MAVEN_TOKEN }}
+      - name: Build with Maven
+        run: mvn clean verify
+        env:
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+      - name: Package with Maven
+        run: mvn package -DskipTests
       - name: Maven publish
-        run: |
-          mvn deploy
+        run: mvn deploy
+        env:
+          GITHUB_USERNAME: ${{ secrets.GITHUB_ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
