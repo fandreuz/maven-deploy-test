@@ -20,5 +20,5 @@ jobs:
           server-password: ${{ secrets.MAVEN_TOKEN }}
       - name: Maven publish
         run: |
-          mvn clean package
+          mvn clean install
           mvn org.sonatype.central:central-publishing-maven-plugin:publish
