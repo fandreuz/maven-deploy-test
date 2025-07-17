@@ -21,6 +21,26 @@
     </dependency>
   </dependencies>
 
+  <licenses>
+      <license>
+          <name>Apache License Version 2.0</name>
+          <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+          <distribution>repo</distribution>
+      </license>
+  </licenses>
+  <scm>
+      <url>https://github.com/fandreuz/maven-deploy-test</url>
+      <connection>scm:git:git@github.com:fandreuz/maven-deploy-test.git</connection>
+      <developerConnection>scm:git:git@github.com:fandreuz/maven-deploy-test.git</developerConnection>
+  </scm>
+  <developers>
+      <developer>
+          <id>fandreuz</id>
+          <name>Francesco Andreuzzi</name>
+          <email>andreuzzi.francesco@gmail.com</email>
+      </developer>
+  </developers>
+
   <packaging>jar</packaging>
 
   <properties>
