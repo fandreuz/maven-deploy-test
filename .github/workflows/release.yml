@@ -22,7 +22,7 @@ jobs:
         with:
           servers: '[{"id": "central", "username": "${{secrets.MAVEN_USER}}", "password": "${{secrets.MAVEN_TOKEN}}"}]'
       - name: Maven publish
-        run: mvn -Drevision=${{ github.ref_name }} deploy
+        run: mvn -Drevision=${GITHUB_REF_NAME#v} deploy
         env:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           GITHUB_USERNAME: ${{ secrets.GITHUB_ACTOR }}
