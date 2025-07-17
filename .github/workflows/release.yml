@@ -19,4 +19,6 @@ jobs:
           server-username: ${{ secrets.MAVEN_USER }}--- central-publishing-maven-plugin:0.8.0:publish
           server-password: ${{ secrets.MAVEN_TOKEN }}
       - name: Maven publish
-        run: mvn org.sonatype.central:central-publishing-maven-plugin:publish
+        run: |
+          mvn clean package
+          mvn org.sonatype.central:central-publishing-maven-plugin:publish
