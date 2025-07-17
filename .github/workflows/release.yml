@@ -18,5 +18,5 @@ jobs:
           server-id: central
           server-username: ${{ secrets.MAVEN_USER }}
           server-password: ${{ secrets.MAVEN_TOKEN }}
-      - name: Maven deploy
-        run: mvn deploy
+      - name: Maven publish
+        run: mvn publish
