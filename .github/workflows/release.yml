@@ -24,7 +24,7 @@ jobs:
       - name: Maven publish
         run: |
           mvn clean verify
-          mvn package gpg:sign
+          mvn package
           mvn deploy
         env:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
