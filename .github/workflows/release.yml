@@ -19,4 +19,4 @@ jobs:
           server-username: ${{ secrets.MAVEN_USER }}
           server-password: ${{ secrets.MAVEN_TOKEN }}
       - name: Maven deploy
-        run: maven deploy
+        run: mvn deploy
