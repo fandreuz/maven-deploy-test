@@ -16,7 +16,7 @@ jobs:
           distribution: corretto
           java-version: 21
           server-id: central
-          server-username: ${{ secrets.MAVEN_USER }}
+          server-username: ${{ secrets.MAVEN_USER }}--- central-publishing-maven-plugin:0.8.0:publish
           server-password: ${{ secrets.MAVEN_TOKEN }}
       - name: Maven publish
-        run: mvn publish
+        run: mvn org.sonatype.central:central-publishing-maven-plugin:publish
